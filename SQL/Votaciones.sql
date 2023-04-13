@@ -13,6 +13,8 @@ create table if not exists Voto (
 insert into Voto values (1, 'San Miguel','guatemala', 'naranja', 'UFC');
 insert into Voto values (1, 'guatemala','guatemala', 'blanca', 'UFC');
 insert into Voto values (1, 'chiquimula','chiquimula', 'blanca', 'UNE');
+insert into Voto values (1, 'chiquimula','chiquimula', 'blanca', 'UNE');
+insert into Voto values (1, 'chiquimula','chiquimula', 'blanca', 'UNE');
 
 Drop procedure if exists topDPresidente;
 DELIMITER &&
@@ -38,6 +40,15 @@ create procedure cantVotosM()
     end &&
 DELIMITER ;
 
+Drop procedure if exists totalVotos;
+DELIMITER &&
+create procedure totalVotos()
+    begin
+        select count(*) as cantVotos from Voto;
+    end &&
+DELIMITER ;
+
 call topDPresidente();
 call cantVotosD();
 call cantVotosM();
+call totalVotos();
