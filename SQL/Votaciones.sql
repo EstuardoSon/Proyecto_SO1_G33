@@ -10,12 +10,6 @@ create table if not exists Voto (
     Partido varchar(10)
 );
 
-insert into Voto values (1, 'San Miguel','guatemala', 'naranja', 'UFC');
-insert into Voto values (1, 'guatemala','guatemala', 'blanca', 'UFC');
-insert into Voto values (1, 'chiquimula','chiquimula', 'blanca', 'UNE');
-insert into Voto values (1, 'chiquimula','chiquimula', 'blanca', 'UNE');
-insert into Voto values (1, 'chiquimula','chiquimula', 'blanca', 'UNE');
-
 Drop procedure if exists topDPresidente;
 DELIMITER &&
 create procedure topDPresidente()

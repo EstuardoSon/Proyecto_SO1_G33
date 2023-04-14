@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grc.examples.demo";
+option java_outer_classname = "DemoProto";
+option objc_class_prefix = "HLW";
+
+package demo;
+
+service Casos{
+    rpc pruebaCaso (Voto) returns (Reply) {}
+}
+
+message Voto{
+    int32 sede = 1;
+    string municipio = 2;
+    string departamento = 3;
+    string papeleta = 4;
+    string partido = 5;
+}
+
+message Reply{
+    string message = 1;
+}

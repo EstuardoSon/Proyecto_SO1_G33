@@ -82,14 +82,14 @@ function App() {
       array = [];
       for (let value of data.votosD) {
         label.push(value.Departamento + ", " + value.Partido);
-        array.push(value.cantVotos / total);
+        array.push(value.cantVotos / total * 100);
       }
 
       setVotosD({
         labels: label,
         datasets: [
           {
-            label: "Total",
+            label: "% Total ",
             data: array,
             backgroundColor: colores(array.length),
           },
@@ -101,14 +101,14 @@ function App() {
 
       for (let value of data.votosM) {
         label.push(value.Municipio + ", " + value.Partido);
-        array.push(value.cantVotos / total);
+        array.push(value.cantVotos / total *100);
       }
 
       setVotosM({
         labels: label,
         datasets: [
           {
-            label: "Total",
+            label: "% Total ",
             data: array,
             backgroundColor: colores(array.length),
           },
