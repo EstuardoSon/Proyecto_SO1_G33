@@ -1,0 +1,81 @@
+version: "3.9"
+services:
+  votosdb:
+    build:
+      context: ./SQL
+      dockerfile: Dockerfile
+    container_name: votosdb
+    environment:
+      MYSQL_ROOT_PASSWORD: 'password'
+      MYSQL_USER: 'estuardo'
+      MYSQL_PASSWORD: 'password'
+    networks:
+      - p_front
+      - p_grpc
+    ports:
+      - "3307:3306"
+    
+  votosgrpcs:
+    build:
+      context: ./gRPC/Server
+      dockerfile: Dockerfile
+    container_name: votosgrpcs
+    restart: "on-failure"
+    env_file: ./.env
+    environment:
+      HOST: votosdb
+      USER_NAME: $USER_NAME
+      PASSWORD: $PASSWORD
+      DATABASE: $DATABASE
+    networks:
+      - p_grpc
+    depends_on:
+      - votosdb
+  
+  votosgrpcc:
+    build:
+      context: ./gRPC/Client
+      dockerfile: Dockerfile
+    container_name: votosgrpcc
+    restart: "on-failure"
+    environment:
+      HOST: votosgrpcs
+    ports:
+      - "3001:3001"
+    networks:
+      - p_grpc
+    depends_on:
+      - votosgrpcs
+
+  votosapi:
+    restart: "on-failure"
+    build:
+      context: ./Api
+      dockerfile: Dockerfile
+    container_name: votosapi
+    env_file: ./.env
+    environment:
+      HOST: votosdb
+      USER_NAME: $USER_NAME
+      PASSWORD: $PASSWORD
+      DATABASE: $DATABASE
+    networks:
+      - p_front
+    depends_on:
+      - votosdb
+  
+  votosreact:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: votosreact
+    ports:
+      - "3000:3000"
+    depends_on:
+      - votosapi
+    networks:
+      - p_front
+
+networks:
+  p_front:
+  p_grpc:

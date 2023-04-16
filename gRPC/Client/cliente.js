@@ -20,7 +20,7 @@ var target;
 if (argv.target) {
   target = argv.target;
 } else {
-  target = "localhost:50051";
+  target = process.env.HOST+":50051";
 }
 var client = new demo_proto.Casos(target, grpc.credentials.createInsecure());
 
