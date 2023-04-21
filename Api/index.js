@@ -6,6 +6,7 @@ const cors = require("cors");
 const { getConnection } = require("./database");
 
 app.use(cors());
+app.set("port", 8080);
 
 const server = http.createServer(app);
 
@@ -36,9 +37,9 @@ io.on("connection", (socket) => {
     });
   };
 
-  setInterval(emitir, 1000);
+  setInterval(emitir, 5000);
 });
 
-server.listen(8000, () => {
-  console.log("Server is running 8000");
+server.listen(app.get("port"), () => {
+  console.log("Server is running 8080");
 });
