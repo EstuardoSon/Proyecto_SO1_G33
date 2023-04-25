@@ -1,15 +1,16 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: votos-mysql
+  name: votosdb
   labels:
     app: votosdb
+  namespace: proyectoso1
 spec:
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 1Gi
+      storage: 2Gi
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -43,12 +44,12 @@ spec:
           - containerPort: 3306
             name: votosdb
         volumeMounts:
-        - name: mysql-volumen
-          mountPath: /var/lib/mysql
+          - name: mysql-volumen
+            mountPath: /var/lib/mysql
       volumes:
-      - name: mysql-volumen
-        persistentVolumeClaim:
-          claimName: votos-mysql
+        - name: mysql-volumen
+          persistentVolumeClaim:
+            claimName: votosdb
 ---
 apiVersion: v1
 kind: Service
