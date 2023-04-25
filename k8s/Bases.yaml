@@ -1,0 +1,68 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: votos-mysql
+  labels:
+    app: votosdb
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: votosdb
+  name: votosdb
+  namespace: proyectoso1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: votosdb
+  template:
+    metadata:
+      labels:
+        app: votosdb
+    spec:
+      containers:
+      - image: estuardosonu/votosdb
+        imagePullPolicy: Always
+        name: votosdb
+        env:
+          - name: MYSQL_ROOT_PASSWORD
+            value: "password"
+          - name: MYSQL_USER
+            value: "estuardo"
+          - name: MYSQL_PASSWORD
+            value: "password"
+        ports:
+          - containerPort: 3306
+            name: votosdb
+        volumeMounts:
+        - name: mysql-volumen
+          mountPath: /var/lib/mysql
+      volumes:
+      - name: mysql-volumen
+        persistentVolumeClaim:
+          claimName: votos-mysql
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: votosdb
+  name: votosdb
+  namespace: proyectoso1
+spec:
+  type: LoadBalancer
+  ports:
+    - name: votosdb
+      port: 3306
+      protocol: TCP
+      targetPort: 3306
+  selector:
+    app: votosdb

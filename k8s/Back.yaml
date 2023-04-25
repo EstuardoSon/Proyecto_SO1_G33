@@ -1,0 +1,100 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: votosgrpcs
+  name: votosgrpcs
+  namespace: proyectoso1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: votosgrpcs
+  template:
+    metadata:
+      labels:
+        app: votosgrpcs
+    spec:
+      containers:
+      - image: estuardosonu/votosgrpcs
+        imagePullPolicy: Always
+        name: votosgrpcs
+        env:
+          - name: HOST
+            value: votosdb
+          - name: USER_NAME
+            value: "root"
+          - name: PASSWORD
+            value: "password"
+          - name: DATABASE
+            value: "Votaciones"
+        ports:
+          - containerPort: 50051
+            name: votosgrpcs
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: votosgrpcs
+  name: votosgrpcs
+  namespace: proyectoso1
+spec:
+  type: ClusterIP
+  ports:
+  - port: 50051
+    protocol: TCP
+    targetPort: 50051
+  selector:
+    app: votosgrpcs
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: votosapi
+  name: votosapi
+  namespace: proyectoso1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: votosapi
+  template:
+    metadata:
+      labels:
+        app: votosapi
+    spec:
+      containers:
+      - image: estuardosonu/votosapi
+        imagePullPolicy: Always
+        name: votosapi
+        env:
+          - name: HOST
+            value: votosdb
+          - name: USER_NAME
+            value: "root"
+          - name: PASSWORD
+            value: "password"
+          - name: DATABASE
+            value: "Votaciones"
+        ports:
+          - containerPort: 8080
+            name: votosapi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: votosapi
+  name: votosapi
+  namespace: proyectoso1
+spec:
+  type: LoadBalancer
+  ports:
+    - name: votosapi
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+  selector:
+    app: votosapi

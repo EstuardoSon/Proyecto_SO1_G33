@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: votosgrpcc
+  name: votosgrpcc
+  namespace: proyectoso1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: votosgrpcc
+  template:
+    metadata:
+      labels:
+        app: votosgrpcc
+    spec:
+      containers:
+      - image: estuardosonu/votosgrpcc
+        imagePullPolicy: Always
+        name: votosgrpcc
+        env:
+          - name: HOST
+            value: votosgrpcs
+        ports:
+          - containerPort: 3001
+            name: votosgrpcc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: votosgrpcc
+  name: votosgrpcc
+  namespace: proyectoso1
+spec:
+  type: LoadBalancer
+  ports:
+    - name: votosgrpcc
+      port: 3001
+      protocol: TCP
+      targetPort: 3001
+  selector:
+    app: votosgrpcc
