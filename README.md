@@ -25,17 +25,17 @@ Para acceder a la web ingrese en el sigueinte link:
 Una vez dentro del sitio podra visualizar un dashboard con multiples graficas y una grafica la cual presentan diferentes estadisticas con el total de votos y porcentajes de cada una de las metricas solicitadas.
 
 ### Top 3 de departamentos con mayores votos para presidente
-![Grafica Top](https://github.com/EstuardoSon/Proyecto_SO1_G33/tree/main/ImagenesWeb/Top.png){}
+![Grafica Top](https://github.com/EstuardoSon/Proyecto_SO1_G33/tree/main/ImagenesWeb/Top.png){width='300px'}
 
 ### Porcentaje de votos por partido segun Municipio
-![Grafica VMunicipio](https://github.com/EstuardoSon/Proyecto_SO1_G33/tree/main/ImagenesWeb/VMunicipio.png){}
+![Grafica VMunicipio](https://github.com/EstuardoSon/Proyecto_SO1_G33/tree/main/ImagenesWeb/VMunicipio.png){width='300px'}
 
 ### Porcentaje de votos por partido segun Departamento
-![Grafica VDepartamento](https://github.com/EstuardoSon/Proyecto_SO1_G33/tree/main/ImagenesWeb/VDepartamento.png){}
+![Grafica VDepartamento](https://github.com/EstuardoSon/Proyecto_SO1_G33/tree/main/ImagenesWeb/VDepartamento.png){width='300px'}
 
 ### Tabla con todos los votos ingresados
-![Tabla General](https://github.com/EstuardoSon/Proyecto_SO1_G33/tree/main/ImagenesWeb/Tabla.png){}
+![Tabla General](https://github.com/EstuardoSon/Proyecto_SO1_G33/tree/main/ImagenesWeb/Tabla.png){width='300px'}
 
 En caso de que la informacion en las graficas o tabla no se cargue debe ir a configuraciones del sitio y perimitir el contenido no seguro.
 
-![Error](https://github.com/EstuardoSon/Proyecto_SO1_G33/tree/main/ImagenesWeb/Error.jpeg){}
+![Error](https://github.com/EstuardoSon/Proyecto_SO1_G33/tree/main/ImagenesWeb/Error.jpeg){width='300px'}
