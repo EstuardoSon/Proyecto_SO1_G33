@@ -3,7 +3,7 @@ import "./App.css";
 import GraficaPie from "./Components/GraficaPie";
 import io from "socket.io-client";
 
-const socket = io.connect(process.env.REACT_APP_API);
+const socket = io.connect("http://34.66.149.205:8080");
 
 function App() {
   const colores = (count) => {
@@ -52,12 +52,15 @@ function App() {
     ],
   });
 
+  const [tabla, setTabla] = useState([]);
+
   const [fecha, setFecha] = useState("00-00-0000");
 
   useEffect(() => {
     socket.on("consultar", (data) => {
       const total = data.total[0].cantVotos;
-      setFecha(data.fecha)
+      setFecha(data.fecha);
+      setTabla(data.general[0]);
 
       let label = [];
       let array = [];
@@ -82,7 +85,7 @@ function App() {
       array = [];
       for (let value of data.votosD) {
         label.push(value.Departamento + ", " + value.Partido);
-        array.push(value.cantVotos / total * 100);
+        array.push((value.cantVotos / total) * 100);
       }
 
       setVotosD({
@@ -101,7 +104,7 @@ function App() {
 
       for (let value of data.votosM) {
         label.push(value.Municipio + ", " + value.Partido);
-        array.push(value.cantVotos / total *100);
+        array.push((value.cantVotos / total) * 100);
       }
 
       setVotosM({
@@ -116,6 +119,8 @@ function App() {
       });
     });
   }, [socket]);
+
+  let n = 0;
 
   return (
     <div className="App">
@@ -137,6 +142,42 @@ function App() {
               nombre="Porcentaje de votos por partido segun Departamento"
               dataPie={votosD}
             />
+          </div>
+        </div>
+        <div className="col-md-2"></div>
+      </div>
+      <div></div>
+      <div className="row">
+        <div className="col-md-2"></div>
+        <div className="col-md-8">
+          <div
+            className="row"
+            style={{ maxHeight: "300px", overflowY: "scroll" }}
+          >
+            <table className="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Sede</th>
+                  <th scope="col">Departamento</th>
+                  <th scope="col">Municipio</th>
+                  <th scope="col">Partido</th>
+                  <th scope="col">Papeleta</th>
+                </tr>
+              </thead>
+              <tbody>
+                {tabla
+                  ? tabla.map((voto) => (
+                      <tr key={n++} className="table-dark">
+                        <td scope="row">{voto.Sede}</td>
+                        <td scope="row">{voto.Departamento}</td>
+                        <td scope="row">{voto.Municipio}</td>
+                        <td scope="row">{voto.Partido}</td>
+                        <td scope="row">{voto.Papeleta}</td>
+                      </tr>
+                    ))
+                  : null}
+              </tbody>
+            </table>
           </div>
         </div>
         <div className="col-md-2"></div>

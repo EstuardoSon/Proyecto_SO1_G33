@@ -26,6 +26,7 @@ io.on("connection", (socket) => {
     const [result1] = await connection.query(`call cantVotosD();`);
     const [result2] = await connection.query(`call cantVotosM();`);
     const [result3] = await connection.query(`call totalVotos();`);
+    const result4 = await connection.query(`select * from Voto;`);
     const actual = new Date();
 
     socket.emit("consultar", {
@@ -33,6 +34,7 @@ io.on("connection", (socket) => {
       votosD: result1[0],
       votosM: result2[0],
       total: result3[0],
+      general: result4,
       fecha: actual
     });
   };
