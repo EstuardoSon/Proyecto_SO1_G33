@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import GraficaPie from "./Components/GraficaPie";
+import GraficaBarras from "./Components/GraficaBarras";
 import io from "socket.io-client";
 
 const socket = io.connect("http://34.66.149.205:8080");
@@ -52,7 +53,21 @@ function App() {
     ],
   });
 
+  const [sedes, setSedes] = useState({
+    labels: ["vacio"],
+    datasets: [
+      {
+        label: "Total",
+        data: [100],
+        backgroundColor: ["black"],
+      },
+    ],
+  });
+
+
   const [tabla, setTabla] = useState([]);
+
+  const [tabla2, setTabla2] = useState([]);
 
   const [fecha, setFecha] = useState("00-00-0000");
 
@@ -61,6 +76,7 @@ function App() {
       const total = data.total[0].cantVotos;
       setFecha(data.fecha);
       setTabla(data.general[0]);
+      setTabla2(data.ultimos);
 
       let label = [];
       let array = [];
@@ -117,6 +133,25 @@ function App() {
           },
         ],
       });
+
+      label = [];
+      array = [];
+      for (let value of data.barras) {
+        label.push(value.name);
+        array.push(value.value);
+      }
+
+      setSedes({
+        labels: label,
+        datasets: [
+          {
+            label: "# votos",
+            data: array,
+            backgroundColor: colores(array.length),
+          },
+        ],
+      });
+
     });
   }, [socket]);
 
@@ -179,6 +214,53 @@ function App() {
               </tbody>
             </table>
           </div>
+        </div>
+        <div className="col-md-2"></div>
+      </div>
+      <br></br>
+      <div><p style={{ fontSize: "25px", fontWeight: "450"}}>Últimos 5 Votos</p></div>
+      <div className="row">
+        <div className="col-md-2"></div>
+        <div className="col-md-8">
+          <div
+            className="row"
+            style={{ maxHeight: "300px", overflowY: "scroll" }}
+          >
+            <table className="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Sede</th>
+                  <th scope="col">Departamento</th>
+                  <th scope="col">Municipio</th>
+                  <th scope="col">Partido</th>
+                  <th scope="col">Papeleta</th>
+                </tr>
+              </thead>
+              <tbody>
+                {tabla2
+                  ? tabla2.map((voto) => (
+                      <tr key={n++} className="table-dark">
+                        <td scope="row">{voto.sede}</td>
+                        <td scope="row">{voto.departamento}</td>
+                        <td scope="row">{voto.municipio}</td>
+                        <td scope="row">{voto.partido}</td>
+                        <td scope="row">{voto.papeleta}</td>
+                      </tr>
+                    ))
+                  : null}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div className="col-md-2"></div>
+      </div>
+      <div className="row">
+        <div className="col-md-2"></div>
+        <div className="col-md-8">
+          <GraficaBarras
+                nombre="5 sedes con mayores votos almacenados"
+                dataBar={sedes}
+          />
         </div>
         <div className="col-md-2"></div>
       </div>

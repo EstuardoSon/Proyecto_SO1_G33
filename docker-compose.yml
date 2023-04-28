@@ -12,6 +12,7 @@ services:
     networks:
       - p_front
       - p_grpc
+      - p_redis
     ports:
       - "3307:3306"
     
@@ -47,6 +48,41 @@ services:
     depends_on:
       - votosgrpcs
 
+  redis:
+    build:
+      context: ./Redis/Redis-server
+      dockerfile: Dockerfile
+    container_name: redis
+    networks:
+      - p_redis
+    ports:
+      - "6378:6379"
+
+  redis-sub:
+    build:
+      context: ./Redis/redissub
+      dockerfile: Dockerfile
+    container_name: redis-sub
+    restart: "on-failure"
+    networks:
+      - p_redis
+    depends_on:
+      - redis
+      - votosdb
+
+  redis-pub:
+    build:
+      context: ./Redis/redispub
+      dockerfile: Dockerfile
+    container_name: redis-pub
+    restart: "on-failure"
+    networks:
+      - p_redis
+    ports:
+      - "8016:8016"
+    depends_on:
+      - redis
+
   votosapi:
     restart: "on-failure"
     build:
@@ -61,6 +97,7 @@ services:
       DATABASE: $DATABASE
     networks:
       - p_front
+      - p_redis
     depends_on:
       - votosdb
   
@@ -79,3 +116,4 @@ services:
 networks:
   p_front:
   p_grpc:
+  p_redis:
