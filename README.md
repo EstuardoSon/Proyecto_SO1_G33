@@ -24,6 +24,8 @@ Para acceder a la web ingrese en el sigueinte link:
 
 Una vez dentro del sitio podra visualizar un dashboard con multiples graficas y una grafica la cual presentan diferentes estadisticas con el total de votos y porcentajes de cada una de las metricas solicitadas.
 
+![Web](ImagenesWeb/Web.png)
+
 ### Top 3 de departamentos con mayores votos para presidente
 ![Grafica Top](ImagenesWeb/Top.png)
 
