@@ -6,7 +6,7 @@ Grpc Client como su nombre lo indica es el cliente que se consume para enviar da
 ### demo.proto
 En este archivo se definen las solicitudes los casos de "endpoints" que enviara el cliente asi como el formato de las solicitudes enviadas.
 
-```
+```JS
 # Definicion del archivo
 syntax = "proto3";
 
@@ -42,7 +42,7 @@ message Reply{
 ### cliente.js
 En este archivo se establece la conexion con el servidor de grpc.
 
-```
+```JS
 # Definir una variable con la direccion de demo.proto
 
 var PROTO_PATH = "./demo.proto";
@@ -88,7 +88,7 @@ module.exports =  client;
 ### index.js
 En este archivo se ejecuta el cliente definiendo el puerto por el cual recivira las solicitudes.
 
-```
+```JS
 # Importar librerias
 const express = require("express");
 const app = express();
@@ -131,7 +131,7 @@ app.listen(app.get("port"), () => {
 ## Docker
 Para el funcionamiento de esta aplicacion se creo la imagen de docker por medio del siguiente Dockerfile.
 
-```
+```DOCKERFILE
 # Definir la imagen a utilizar
 FROM node:18
 

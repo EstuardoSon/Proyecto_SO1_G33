@@ -32,10 +32,16 @@ var redisClient = redis.NewClient(&redis.Options{
 
 func main() {
 
-	http.HandleFunc("/insertar", insertar)
+	http.HandleFunc("/Mysql", insertar)
 	log.Println("Server listening on port 8016...")
 
-	err := redisClient.Set(ctx, "v1", "", 0).Err()
+	_, err := redisClient.Ping(ctx).Result()
+
+	if err != nil {
+		panic(err)
+	}
+
+	err = redisClient.Set(ctx, "v1", "", 0).Err()
 	if err != nil {
 		panic(err)
 	}

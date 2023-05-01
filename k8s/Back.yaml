@@ -31,6 +31,10 @@ spec:
         ports:
           - containerPort: 50051
             name: votosgrpcs
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
 ---
 apiVersion: v1
 kind: Service
@@ -69,6 +73,10 @@ spec:
       - image: estuardosonu/votosapi
         imagePullPolicy: Always
         name: votosapi
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
         env:
           - name: HOST
             value: votosdb
@@ -98,3 +106,25 @@ spec:
       targetPort: 8080
   selector:
     app: votosapi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: redis-sub
+  name: redis-sub
+  namespace: proyectoso1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis-sub
+  template:
+    metadata:
+      labels:
+        app: redis-sub
+    spec:
+      containers:
+      - image: estuardosonu/redis-sub
+        imagePullPolicy: Always
+        name: redis-sub

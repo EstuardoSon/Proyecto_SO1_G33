@@ -6,7 +6,7 @@ El despliegue de todos los Backends se realiza en un cluster de kubernetes en go
 ### NameSpace.yaml
 Creacion de un NameSpace en el cluster de nombre *proyectoso1*.
 
-```
+```YAML
 apiVersion: v1
 kind: Namespace
 metadata:
@@ -17,7 +17,7 @@ metadata:
 En este archivo se encuentran los services y deployments para levantar las bases de datos en kubernetes.
 
 #### * MySQL Volumen
-```
+```YAML
 apiVersion: v1  #Definir la version con la que se trabaja
 kind: PersistentVolumeClaim # Tipo de componente
 metadata:
@@ -34,7 +34,7 @@ spec:
 ```
 
 #### * MySQL Deployment
-```
+```YAML
 apiVersion: apps/v1 # Version con la que se trabaja
 kind: Deployment # Tipo de componente
 metadata:
@@ -76,7 +76,7 @@ spec:
 ```
 
 #### * MySQL Server
-```
+```YAML
 apiVersion: v1 # Version de la aplicacion
 kind: Service # Tipo de Componente
 metadata:
@@ -100,7 +100,7 @@ En este archivo se definen los deployments y services que ayudaran a la implemen
 
 #### * GRPC Server Deployment
 
-```
+```YAML
 apiVersion: apps/v1 # Version de Kubernetes
 kind: Deployment # Tipo de componente
 metadata:
@@ -137,7 +137,7 @@ spec:
 ``` 
 
 #### * GRPC Server Service
-```
+```YAML
 apiVersion: v1 # Version de Kubernetes
 kind: Service # Tipo de componente
 metadata:
@@ -156,7 +156,7 @@ spec:
 ```
 
 #### * API Deployment
-```
+```YAML
 apiVersion: apps/v1 # Version de kubernetes
 kind: Deployment # Tipo de componente
 metadata:
@@ -193,7 +193,7 @@ spec:
 ```
 
 #### * API Service
-```
+```YAML
 apiVersion: v1 # Version de kubernetes
 kind: Service # Tipo de componente
 metadata:
@@ -216,7 +216,7 @@ spec:
 En este archivo se encuentra los objetos para la construccion del deployment y service del cliente de GRPC.
 
 #### * Deployment
-```
+```YAML
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -247,7 +247,7 @@ spec:
 ```
 
 #### * Service
-```
+```YAML
 apiVersion: v1
 kind: Service
 metadata:

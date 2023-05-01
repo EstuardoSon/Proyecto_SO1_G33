@@ -25,6 +25,10 @@ app.post("/Mysql", async (req, res) => {
   });
 });
 
+app.get("/",async (req, res) => {
+    res.status(200).json({ message: "Conectado" });
+});
+
 app.listen(app.get("port"), () => {
   console.log(`Server on port ${app.get("port")}`);
 });

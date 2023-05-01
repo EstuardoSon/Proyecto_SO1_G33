@@ -6,7 +6,7 @@ La api consiste en una aplicacion en nodeJS que utiliza websocket para el envio 
 ### database.js
 En este archivo se encuentra una funcion que se utiliza para conectar con la base de datos de MySQL.
 
-```
+```JS
 const mysql = require("mysql2");
 
 const connection = mysql.createConnection({
@@ -35,7 +35,7 @@ Este archivo depende de las variables de entrono:
 
 En este archivo se ejecuta el servidor de la api la cual utiliza socket.io para una conexion en tiempo real:
 
-```
+```JS
 #Creacion de condiciones iniciales del servidor
 const express = require("express");
 const app = express();
@@ -97,7 +97,7 @@ server.listen(app.get("port"), () => {
 ## Docker
 Para el funcionamiento de esta aplicacion se creo la imagen de docker por medio del siguiente Dockerfile.
 
-```
+```DOCKERFILE
 # Definir la imagen a utilizar
 FROM node:18-alpine as api
 

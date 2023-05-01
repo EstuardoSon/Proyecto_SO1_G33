@@ -8,7 +8,7 @@ El frontend consta de una aplicacion dashboard creada en react que muestra la in
 ### App.js
 Es el componente principal de la aplicacion en la cual se ejecutan componentes posteriores.
 
-```
+```JS
 # Importacion de librerias
 import { useEffect, useState } from "react";
 import "./App.css";
@@ -217,7 +217,7 @@ export default App;
 ### GraficaPie.js
 En este compoente gracias a la librearia Chart.js se rederiza una grafica de PIE con la informacion que se le es trasladada por medio de props.
 
-```
+```JS
 import React, { Component } from "react";
 import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS } from "chart.js/auto";
@@ -240,7 +240,7 @@ export default GraficaPie;
 ## Docker
 Para el funcionamiento de esta aplicacion se creo la imagen de docker por medio del siguiente Dockerfile.
 
-```
+```DOCKERFILE
 # Establecer la imagen inicial con la que se creara la aplicacion
 FROM node:18-alpine as frontend
 

@@ -6,7 +6,7 @@ En esta aplicacion de Python simula multiples clientes que realizan solicitudes 
 ### traffic.json
 Este archivo contiene un json con la informacion que sera enviada a las API para su consumo y procesamiento.
 
-```
+```JSON
 [
     {
         "sede": 1,
@@ -21,7 +21,7 @@ Este archivo contiene un json con la informacion que sera enviada a las API para
 
 ### traffic.py
 
-```
+```PY
 # Importar librerias
 from locust import HttpUser, task
 from random import randrange

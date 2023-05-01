@@ -34,7 +34,7 @@ metadata:
   name: votosgrpcc
   namespace: proyectoso1
 spec:
-  type: LoadBalancer
+  type: NodePort
   ports:
     - name: votosgrpcc
       port: 3001
@@ -42,3 +42,45 @@ spec:
       targetPort: 3001
   selector:
     app: votosgrpcc
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: redis-pub
+  name: redis-pub
+  namespace: proyectoso1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis-pub
+  template:
+    metadata:
+      labels:
+        app: redis-pub
+    spec:
+      containers:
+      - image: estuardosonu/redis-pub
+        imagePullPolicy: Always
+        name: redis-pub
+        ports:
+          - containerPort: 8016
+            name: redis-pub
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: redis-pub
+  name: redis-pub
+  namespace: proyectoso1
+spec:
+  type: LoadBalancer
+  ports:
+    - name: redis-pub
+      port: 8016
+      protocol: TCP
+      targetPort: 8016
+  selector:
+    app: redis-pub

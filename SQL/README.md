@@ -1,7 +1,7 @@
 # DATABASE
 Esta base de datos trabajada en MySQL consta unicamente de una tabla en la cual se registran todos los datos.
 
-```
+```SQL
 # Creacion de la base de datos Votaciones
 drop database if exists Votaciones;
 Create database if not exists Votaciones;
@@ -65,7 +65,7 @@ call totalVotos();
 ## Docker
 Para el funcionamiento de esta aplicacion se creo la imagen de docker por medio del siguiente Dockerfile.
 
-```
+```DOCKERFILE
 # Definir la imagen a utilizar
 FROM mysql:8.0.32 as database
 

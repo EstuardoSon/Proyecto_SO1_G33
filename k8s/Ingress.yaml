@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress
+  namespace: proyectoso1
+spec:
+  rules:
+  - http:
+      paths:
+        - path: /Mysql
+          pathType: Prefix
+          backend:
+            service:
+              name: redis-pub
+              port:
+                name: redis-pub

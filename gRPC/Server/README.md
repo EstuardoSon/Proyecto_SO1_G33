@@ -6,7 +6,7 @@ Grpc Client como su nombre lo indica es el cliente que se consume para recibir d
 ### demo.proto
 En este archivo se definen las solicitudes los casos de "endpoints" que enviara el cliente asi como el formato de las solicitudes enviadas.
 
-```
+```JS
 # Definicion del archivo
 syntax = "proto3";
 
@@ -42,7 +42,7 @@ message Reply{
 ### database.js
 En este archivo se encuentra una funcion que se utiliza para conectar con la base de datos de MySQL.
 
-```
+```JS
 const mysql = require("mysql2");
 
 const connection = mysql.createConnection({
@@ -70,7 +70,7 @@ Este archivo depende de las variables de entrono:
 ### index.js
 En este archivo se define el puerto en el que se ejecutara el servidor, asi como el procesamiento de la informacion para su ingreso en la base de datos.
 
-```
+```JS
 # Importar librerias
 const { getConnection } = require("./database");
 const connection = getConnection();
@@ -135,7 +135,7 @@ main();
 ## Docker
 Para el funcionamiento de esta aplicacion se creo la imagen de docker por medio del siguiente Dockerfile.
 
-```
+```DOCKERFILE
 # Definir la imagen a utilizar
 FROM node:18
 
