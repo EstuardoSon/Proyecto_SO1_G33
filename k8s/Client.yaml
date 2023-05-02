@@ -26,23 +26,6 @@ spec:
           - containerPort: 3001
             name: votosgrpcc
 ---
-apiVersion: v1
-kind: Service
-metadata:
-  labels:
-    app: votosgrpcc
-  name: votosgrpcc
-  namespace: proyectoso1
-spec:
-  type: NodePort
-  ports:
-    - name: votosgrpcc
-      port: 3001
-      protocol: TCP
-      targetPort: 3001
-  selector:
-    app: votosgrpcc
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -72,11 +55,28 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
+    app: votosgrpcc
+  name: votosgrpcc
+  namespace: proyectoso1
+spec:
+  type: ClusterIP
+  ports:
+    - name: votosgrpcc
+      port: 3001
+      protocol: TCP
+      targetPort: 3001
+  selector:
+    app: votosgrpcc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
     app: redis-pub
   name: redis-pub
   namespace: proyectoso1
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   ports:
     - name: redis-pub
       port: 8016

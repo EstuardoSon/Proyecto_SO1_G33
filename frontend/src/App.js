@@ -4,7 +4,7 @@ import GraficaPie from "./Components/GraficaPie";
 import GraficaBarras from "./Components/GraficaBarras";
 import io from "socket.io-client";
 
-const socket = io.connect("http://104.154.146.19:8080");
+const socket = io.connect("http://35.222.138.58:8080");
 
 function App() {
   const colores = (count) => {

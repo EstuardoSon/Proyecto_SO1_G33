@@ -1,4 +1,3 @@
-drop database if exists Votaciones;
 Create database if not exists Votaciones;
 use Votaciones;
 

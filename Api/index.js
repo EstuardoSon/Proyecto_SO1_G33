@@ -4,8 +4,8 @@ const http = require("http");
 const { Server } = require("socket.io");
 const cors = require("cors");
 const { getConnection } = require("./database");
-const redis = require('redis');
-const {promisify} = require('util')
+const redis = require("redis");
+const { promisify } = require("util");
 
 app.use(cors());
 app.set("port", 8080);
@@ -21,10 +21,10 @@ const io = new Server(server, {
 
 const client = redis.createClient({
   host: 'redis',
-  port: '6379'
+  port: "6379",
 });
 
-const GETR = promisify(client.get).bind(client)
+const GETR = promisify(client.get).bind(client);
 
 io.on("connection", (socket) => {
   console.log(`Usuario conectado`);
@@ -39,32 +39,73 @@ io.on("connection", (socket) => {
     const actual = new Date();
 
     const lastfive = new Array(5);
-    const v1 = await GETR('v1')
-    lastfive[0] = v1
+    const v1 = await GETR("v1");
+    if (v1 == null) {
+      lastfive[0] = "";
+      client.set("v1", "", (err, reply) => {
+        if (err) console.log(err);
+      });
+    }
+    else{
+      lastfive[0] = v1;
+    }
 
-    const v2 = await GETR('v2')
-    lastfive[1] = v2
+    const v2 = await GETR("v2");
+    if (v2 == null) {
+      lastfive[0] = "";
+      client.set("v2", "", (err, reply) => {
+        if (err) console.log(err);
+      });
+    }
+    else{
+      lastfive[1] = v2;
+    }
 
-    const v3 = await GETR('v3')
-    lastfive[2] = v3
+    const v3 = await GETR("v3");
+    if (v3 == null) {
+      lastfive[2] = "";
+      client.set("v3", "", (err, reply) => {
+        if (err) console.log(err);
+      });
+    }
+    else{
+      lastfive[2] = v3;
+    }
 
-    const v4 = await GETR('v4')
-    lastfive[3] = v4
+    const v4 = await GETR("v4");
+    if (v4 == null) {
+      lastfive[3] = "";
+      client.set("v4", "", (err, reply) => {
+        if (err) console.log(err);
+      });
+    }
+    else{
+      lastfive[3] = v4;
+    }
 
-    const v5 = await GETR('v5')
-    lastfive[4] = v5
+    const v5 = await GETR("v5");
+    if (v1 == null) {
+      lastfive[4] = "";
+      client.set("v5", "", (err, reply) => {
+        if (err) console.log(err);
+      });
+    }
+    else{
+      lastfive[4] = v5;
+    }
 
     for (let index = 0; index < lastfive.length; index++) {
-      if (lastfive[index] != ""){
+      if (lastfive[index] != "") {
         const element = JSON.parse(lastfive[index]);
-        lastfive[index] = element
-      }else{
-        lastfive[index] = '{"sede":0,"municipio":"---","departamento":"---","papeleta":"---","partido":"---"}'
+        lastfive[index] = element;
+      } else {
+        lastfive[index] =
+          '{"sede":0,"municipio":"---","departamento":"---","papeleta":"---","partido":"---"}';
         const element = JSON.parse(lastfive[index]);
-        lastfive[index] = element
+        lastfive[index] = element;
       }
     }
-  
+
     const topredis = await obtenerCincoMayores();
 
     socket.emit("consultar", {
@@ -75,7 +116,7 @@ io.on("connection", (socket) => {
       general: result4,
       fecha: actual,
       ultimos: lastfive,
-      barras: topredis
+      barras: topredis,
     });
   };
 
@@ -88,31 +129,40 @@ server.listen(app.get("port"), () => {
 
 async function obtenerCincoMayores() {
   try {
-      const sedes = await GETR('sedes')
-
+    const sedes = await GETR("sedes");
+    if (sedes != null) {
       const sedesArray = sedes.split(",");
-      var nuevostring = ""
+      var nuevostring = "";
       for (let i = 0; i < sedesArray.length; i++) {
-          var tmp = await GETR(sedesArray[i])
+        var tmp = await GETR(sedesArray[i]);
 
-          if (i == 0){
-              nuevostring = sedesArray[i] + ", " + tmp
-          }else{
-              nuevostring = nuevostring + "|" + sedesArray[i] + ", " + tmp
-          }
+        if (i == 0) {
+          nuevostring = sedesArray[i] + ", " + tmp;
+        } else {
+          nuevostring = nuevostring + "|" + sedesArray[i] + ", " + tmp;
+        }
       }
-      const data = nuevostring.split("|")
+      const data = nuevostring.split("|");
       //console.log(data);
 
-      const sortedData = data.map(item => {
-        const [name, value] = item.split(", ");
-        return { name, value: parseInt(value) };
-      }).sort((a, b) => b.value - a.value);
-      
+      const sortedData = data
+        .map((item) => {
+          const [name, value] = item.split(", ");
+          return { name, value: parseInt(value) };
+        })
+        .sort((a, b) => b.value - a.value);
+
       const top5 = sortedData.slice(0, 5);
       return top5;
+    }else{
+      client.set("sedes", "", (err, reply) => {
+        if (err) console.log(err);
+      });
+      const top5 = sortedData.slice(0, 5);
+      return top5;
+    }
 
   } catch (error) {
-      return "Vacio"
+    return "Vacio";
   }
 }

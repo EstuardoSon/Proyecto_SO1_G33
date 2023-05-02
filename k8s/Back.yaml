@@ -22,6 +22,8 @@ spec:
         env:
           - name: HOST
             value: votosdb
+          - name: REDIS
+            value: redis
           - name: USER_NAME
             value: "root"
           - name: PASSWORD
@@ -73,10 +75,6 @@ spec:
       - image: estuardosonu/votosapi
         imagePullPolicy: Always
         name: votosapi
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
         env:
           - name: HOST
             value: votosdb
