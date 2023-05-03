@@ -192,6 +192,7 @@ function App() {
             <table className="table table-hover">
               <thead>
                 <tr>
+                  <th scope="col">No. Voto</th>
                   <th scope="col">Sede</th>
                   <th scope="col">Departamento</th>
                   <th scope="col">Municipio</th>
@@ -202,7 +203,8 @@ function App() {
               <tbody>
                 {tabla
                   ? tabla.map((voto) => (
-                      <tr key={n++} className="table-dark">
+                      <tr key={n} className="table-dark">
+                        <td scope="row">{n++}</td>
                         <td scope="row">{voto.Sede}</td>
                         <td scope="row">{voto.Departamento}</td>
                         <td scope="row">{voto.Municipio}</td>

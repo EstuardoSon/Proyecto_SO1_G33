@@ -7,9 +7,394 @@
         "partido": "UNE"
     },
     {
+        "sede": 7,
+        "municipio": "Patzun",
+        "departamento": "Chimaltenango",
+        "papeleta": "Blanca",
+        "partido": "VAMOS"
+    },
+    {
         "sede": 1,
         "municipio": "Guatemala",
         "departamento": "Guatemala",
+        "papeleta": "Blanca",
+        "partido": "FCN"
+    },
+    {
+        "sede": 3,
+        "municipio": "Esquipulas",
+        "departamento": "Chiquimula",
+        "papeleta": "Blanca",
+        "partido": "UNIONISTA"
+    },
+    {
+        "sede": 1,
+        "municipio": "Guatemala",
+        "departamento": "Guatemala",
+        "papeleta": "Blanca",
+        "partido": "VALOR"
+    },
+    {
+        "sede": 6,
+        "municipio": "Masagua",
+        "departamento": "Escuintla",
+        "papeleta": "Blanca",
+        "partido": "UNE"
+    },
+    {
+        "sede": 4,
+        "municipio": "Flores",
+        "departamento": "Peten",
+        "papeleta": "Blanca",
+        "partido": "VAMOS"
+    },
+    {
+        "sede": 4,
+        "municipio": "Flores",
+        "departamento": "Peten",
+        "papeleta": "Blanca",
+        "partido": "FCN"
+    },
+    {
+        "sede": 7,
+        "municipio": "Patzun",
+        "departamento": "Chimaltenango",
+        "papeleta": "Blanca",
+        "partido": "UNIONISTA"
+    },
+    {
+        "sede": 3,
+        "municipio": "Esquipulas",
+        "departamento": "Chiquimula",
+        "papeleta": "Blanca",
+        "partido": "VALOR"
+    },
+    {
+        "sede": 4,
+        "municipio": "Flores",
+        "departamento": "Peten",
+        "papeleta": "Blanca",
+        "partido": "UNE"
+    },
+    {
+        "sede": 1,
+        "municipio": "Guatemala",
+        "departamento": "Guatemala",
+        "papeleta": "Blanca",
+        "partido": "VAMOS"
+    },
+    {
+        "sede": 3,
+        "municipio": "Esquipulas",
+        "departamento": "Chiquimula",
+        "papeleta": "Blanca",
+        "partido": "FCN"
+    },
+    {
+        "sede": 1,
+        "municipio": "Guatemala",
+        "departamento": "Guatemala",
+        "papeleta": "Blanca",
+        "partido": "UNIONISTA"
+    },
+    {
+        "sede": 7,
+        "municipio": "Patzun",
+        "departamento": "Chimaltenango",
+        "papeleta": "Blanca",
+        "partido": "VALOR"
+    },
+    {
+        "sede": 6,
+        "municipio": "Masagua",
+        "departamento": "Escuintla",
+        "papeleta": "Blanca",
+        "partido": "UNE"
+    },
+    {
+        "sede": 1,
+        "municipio": "Guatemala",
+        "departamento": "Guatemala",
+        "papeleta": "Blanca",
+        "partido": "VAMOS"
+    },
+    {
+        "sede": 6,
+        "municipio": "Masagua",
+        "departamento": "Escuintla",
+        "papeleta": "Blanca",
+        "partido": "FCN"
+    },
+    {
+        "sede": 3,
+        "municipio": "Esquipulas",
+        "departamento": "Chiquimula",
+        "papeleta": "Blanca",
+        "partido": "UNIONISTA"
+    },
+    {
+        "sede": 4,
+        "municipio": "Flores",
+        "departamento": "Peten",
+        "papeleta": "Blanca",
+        "partido": "VALOR"
+    },
+    {
+        "sede": 3,
+        "municipio": "Esquipulas",
+        "departamento": "Chiquimula",
+        "papeleta": "Blanca",
+        "partido": "UNE"
+    },
+    {
+        "sede": 7,
+        "municipio": "Patzun",
+        "departamento": "Chimaltenango",
+        "papeleta": "Blanca",
+        "partido": "VAMOS"
+    },
+    {
+        "sede": 4,
+        "municipio": "Flores",
+        "departamento": "Peten",
+        "papeleta": "Blanca",
+        "partido": "FCN"
+    },
+    {
+        "sede": 3,
+        "municipio": "Esquipulas",
+        "departamento": "Chiquimula",
+        "papeleta": "Blanca",
+        "partido": "UNIONISTA"
+    },
+    {
+        "sede": 3,
+        "municipio": "Esquipulas",
+        "departamento": "Chiquimula",
+        "papeleta": "Blanca",
+        "partido": "VALOR"
+    },
+    {
+        "sede": 1,
+        "municipio": "Guatemala",
+        "departamento": "Guatemala",
+        "papeleta": "Blanca",
+        "partido": "UNE"
+    },
+    {
+        "sede": 3,
+        "municipio": "Esquipulas",
+        "departamento": "Chiquimula",
+        "papeleta": "Blanca",
+        "partido": "VAMOS"
+    },
+    {
+        "sede": 7,
+        "municipio": "Patzun",
+        "departamento": "Chimaltenango",
+        "papeleta": "Blanca",
+        "partido": "FCN"
+    },
+    {
+        "sede": 4,
+        "municipio": "Flores",
+        "departamento": "Peten",
+        "papeleta": "Blanca",
+        "partido": "UNIONISTA"
+    },
+    {
+        "sede": 6,
+        "municipio": "Masagua",
+        "departamento": "Escuintla",
+        "papeleta": "Blanca",
+        "partido": "VALOR"
+    },
+    {
+        "sede": 1,
+        "municipio": "Guatemala",
+        "departamento": "Guatemala",
+        "papeleta": "Blanca",
+        "partido": "UNE"
+    },
+    {
+        "sede": 4,
+        "municipio": "Flores",
+        "departamento": "Peten",
+        "papeleta": "Blanca",
+        "partido": "VAMOS"
+    },
+    {
+        "sede": 3,
+        "municipio": "Esquipulas",
+        "departamento": "Chiquimula",
+        "papeleta": "Blanca",
+        "partido": "FCN"
+    },
+    {
+        "sede": 7,
+        "municipio": "Patzun",
+        "departamento": "Chimaltenango",
+        "papeleta": "Blanca",
+        "partido": "UNIONISTA"
+    },
+    {
+        "sede": 4,
+        "municipio": "Flores",
+        "departamento": "Peten",
+        "papeleta": "Blanca",
+        "partido": "VALOR"
+    },
+    {
+        "sede": 3,
+        "municipio": "Esquipulas",
+        "departamento": "Chiquimula",
+        "papeleta": "Blanca",
+        "partido": "UNE"
+    },
+    {
+        "sede": 4,
+        "municipio": "Flores",
+        "departamento": "Peten",
+        "papeleta": "Blanca",
+        "partido": "VAMOS"
+    },
+    {
+        "sede": 4,
+        "municipio": "Flores",
+        "departamento": "Peten",
+        "papeleta": "Blanca",
+        "partido": "FCN"
+    },
+    {
+        "sede": 4,
+        "municipio": "Flores",
+        "departamento": "Peten",
+        "papeleta": "Blanca",
+        "partido": "UNIONISTA"
+    },
+    {
+        "sede": 3,
+        "municipio": "Esquipulas",
+        "departamento": "Chiquimula",
+        "papeleta": "Blanca",
+        "partido": "VALOR"
+    },
+    {
+        "sede": 7,
+        "municipio": "Patzun",
+        "departamento": "Chimaltenango",
+        "papeleta": "Blanca",
+        "partido": "UNE"
+    },
+    {
+        "sede": 4,
+        "municipio": "Flores",
+        "departamento": "Peten",
+        "papeleta": "Blanca",
+        "partido": "VAMOS"
+    },
+    {
+        "sede": 3,
+        "municipio": "Esquipulas",
+        "departamento": "Chiquimula",
+        "papeleta": "Blanca",
+        "partido": "FCN"
+    },
+    {
+        "sede": 6,
+        "municipio": "Masagua",
+        "departamento": "Escuintla",
+        "papeleta": "Blanca",
+        "partido": "UNIONISTA"
+    },
+    {
+        "sede": 4,
+        "municipio": "Flores",
+        "departamento": "Peten",
+        "papeleta": "Blanca",
+        "partido": "VALOR"
+    },
+    {
+        "sede": 1,
+        "municipio": "Guatemala",
+        "departamento": "Guatemala",
+        "papeleta": "Blanca",
+        "partido": "UNE"
+    },
+    {
+        "sede": 3,
+        "municipio": "Esquipulas",
+        "departamento": "Chiquimula",
+        "papeleta": "Blanca",
+        "partido": "VAMOS"
+    },
+    {
+        "sede": 7,
+        "municipio": "Patzun",
+        "departamento": "Chimaltenango",
+        "papeleta": "Blanca",
+        "partido": "FCN"
+    },
+    {
+        "sede": 6,
+        "municipio": "Masagua",
+        "departamento": "Escuintla",
+        "papeleta": "Blanca",
+        "partido": "UNIONISTA"
+    },
+    {
+        "sede": 6,
+        "municipio": "Masagua",
+        "departamento": "Escuintla",
+        "papeleta": "Blanca",
+        "partido": "VALOR"
+    },
+    {
+        "sede": 3,
+        "municipio": "Esquipulas",
+        "departamento": "Chiquimula",
+        "papeleta": "Blanca",
+        "partido": "UNE"
+    },
+    {
+        "sede": 7,
+        "municipio": "Patzun",
+        "departamento": "Chimaltenango",
+        "papeleta": "Blanca",
+        "partido": "VAMOS"
+    },
+    {
+        "sede": 1,
+        "municipio": "Guatemala",
+        "departamento": "Guatemala",
+        "papeleta": "Blanca",
+        "partido": "FCN"
+    },
+    {
+        "sede": 3,
+        "municipio": "Esquipulas",
+        "departamento": "Chiquimula",
+        "papeleta": "Blanca",
+        "partido": "UNIONISTA"
+    },
+    {
+        "sede": 1,
+        "municipio": "Guatemala",
+        "departamento": "Guatemala",
+        "papeleta": "Blanca",
+        "partido": "VALOR"
+    },
+    {
+        "sede": 6,
+        "municipio": "Masagua",
+        "departamento": "Escuintla",
+        "papeleta": "Blanca",
+        "partido": "UNE"
+    },
+    {
+        "sede": 3,
+        "municipio": "Esquipulas",
+        "departamento": "Chiquimula",
         "papeleta": "Blanca",
         "partido": "VAMOS"
     },
@@ -28,6 +413,41 @@
         "partido": "UNIONISTA"
     },
     {
+        "sede": 6,
+        "municipio": "Masagua",
+        "departamento": "Escuintla",
+        "papeleta": "Blanca",
+        "partido": "VALOR"
+    },
+    {
+        "sede": 3,
+        "municipio": "Esquipulas",
+        "departamento": "Chiquimula",
+        "papeleta": "Blanca",
+        "partido": "UNE"
+    },
+    {
+        "sede": 6,
+        "municipio": "Masagua",
+        "departamento": "Escuintla",
+        "papeleta": "Blanca",
+        "partido": "VAMOS"
+    },
+    {
+        "sede": 6,
+        "municipio": "Masagua",
+        "departamento": "Escuintla",
+        "papeleta": "Blanca",
+        "partido": "FCN"
+    },
+    {
+        "sede": 1,
+        "municipio": "Guatemala",
+        "departamento": "Guatemala",
+        "papeleta": "Blanca",
+        "partido": "UNIONISTA"
+    },
+    {
         "sede": 1,
         "municipio": "Guatemala",
         "departamento": "Guatemala",
@@ -35,9 +455,9 @@
         "partido": "VALOR"
     },
     {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
+        "sede": 7,
+        "municipio": "Patzun",
+        "departamento": "Chimaltenango",
         "papeleta": "Blanca",
         "partido": "UNE"
     },
@@ -109,426 +529,6 @@
         "municipio": "Guatemala",
         "departamento": "Guatemala",
         "papeleta": "Blanca",
-        "partido": "UNE"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "VAMOS"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "FCN"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "UNIONISTA"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "VALOR"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "UNE"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "VAMOS"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "FCN"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "UNIONISTA"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "VALOR"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "UNE"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "VAMOS"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "FCN"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "UNIONISTA"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "VALOR"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "UNE"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "VAMOS"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "FCN"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "UNIONISTA"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "VALOR"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "UNE"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "VAMOS"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "FCN"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "UNIONISTA"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "VALOR"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "UNE"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "VAMOS"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "FCN"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "UNIONISTA"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "VALOR"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "UNE"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "VAMOS"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "FCN"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "UNIONISTA"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "VALOR"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "UNE"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "VAMOS"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "FCN"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "UNIONISTA"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "VALOR"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "UNE"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "VAMOS"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "FCN"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "UNIONISTA"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "VALOR"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "UNE"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "VAMOS"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "FCN"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "UNIONISTA"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "VALOR"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "UNE"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "VAMOS"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "FCN"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "UNIONISTA"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "VALOR"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "UNE"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "VAMOS"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "FCN"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "UNIONISTA"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
-        "partido": "VALOR"
-    },
-    {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
-        "papeleta": "Blanca",
         "partido": "VAMOS"
     },
     {
@@ -567,9 +567,9 @@
         "partido": "UNIONISTA"
     },
     {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
+        "sede": 7,
+        "municipio": "Patzun",
+        "departamento": "Chimaltenango",
         "papeleta": "Blanca",
         "partido": "VALOR"
     },
@@ -595,23 +595,23 @@
         "partido": "VALOR"
     },
     {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
+        "sede": 7,
+        "municipio": "Patzun",
+        "departamento": "Chimaltenango",
         "papeleta": "Verde",
         "partido": "UNE"
     },
     {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
+        "sede": 7,
+        "municipio": "Patzun",
+        "departamento": "Chimaltenango",
         "papeleta": "Verde",
         "partido": "VAMOS"
     },
     {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
+        "sede": 7,
+        "municipio": "Patzun",
+        "departamento": "Chimaltenango",
         "papeleta": "Verde",
         "partido": "FCN"
     },
@@ -658,30 +658,30 @@
         "partido": "UNIONISTA"
     },
     {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
+        "sede": 7,
+        "municipio": "Patzun",
+        "departamento": "Chimaltenango",
         "papeleta": "Verde",
         "partido": "VALOR"
     },
     {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
+        "sede": 6,
+        "municipio": "Masagua",
+        "departamento": "Escuintla",
         "papeleta": "Verde",
         "partido": "UNE"
     },
     {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
+        "sede": 6,
+        "municipio": "Masagua",
+        "departamento": "Escuintla",
         "papeleta": "Verde",
         "partido": "VAMOS"
     },
     {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
+        "sede": 6,
+        "municipio": "Masagua",
+        "departamento": "Escuintla",
         "papeleta": "Verde",
         "partido": "FCN"
     },
@@ -693,23 +693,23 @@
         "partido": "UNIONISTA"
     },
     {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
+        "sede": 6,
+        "municipio": "Masagua",
+        "departamento": "Escuintla",
         "papeleta": "Verde",
         "partido": "VALOR"
     },
     {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
+        "sede": 7,
+        "municipio": "Patzun",
+        "departamento": "Chimaltenango",
         "papeleta": "Verde",
         "partido": "UNE"
     },
     {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
+        "sede": 4,
+        "municipio": "Flores",
+        "departamento": "Peten",
         "papeleta": "Verde",
         "partido": "VAMOS"
     },
@@ -721,51 +721,51 @@
         "partido": "FCN"
     },
     {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
+        "sede": 4,
+        "municipio": "Flores",
+        "departamento": "Peten",
         "papeleta": "Verde",
         "partido": "UNIONISTA"
     },
     {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
+        "sede": 6,
+        "municipio": "Masagua",
+        "departamento": "Escuintla",
         "papeleta": "Verde",
         "partido": "VALOR"
     },
     {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
+        "sede": 4,
+        "municipio": "Flores",
+        "departamento": "Peten",
         "papeleta": "Verde",
         "partido": "UNE"
     },
     {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
+        "sede": 7,
+        "municipio": "Patzun",
+        "departamento": "Chimaltenango",
         "papeleta": "Verde",
         "partido": "VAMOS"
     },
     {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
+        "sede": 4,
+        "municipio": "Flores",
+        "departamento": "Peten",
         "papeleta": "Verde",
         "partido": "FCN"
     },
     {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
+        "sede": 3,
+        "municipio": "Esquipulas",
+        "departamento": "Chiquimula",
         "papeleta": "Verde",
         "partido": "UNIONISTA"
     },
     {
-        "sede": 1,
-        "municipio": "Guatemala",
-        "departamento": "Guatemala",
+        "sede": 7,
+        "municipio": "Patzun",
+        "departamento": "Chimaltenango",
         "papeleta": "Verde",
         "partido": "VALOR"
     }
