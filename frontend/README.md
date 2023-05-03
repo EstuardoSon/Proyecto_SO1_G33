@@ -13,10 +13,11 @@ Es el componente principal de la aplicacion en la cual se ejecutan componentes p
 import { useEffect, useState } from "react";
 import "./App.css";
 import GraficaPie from "./Components/GraficaPie";
+import GraficaBarras from "./Components/GraficaBarras";
 import io from "socket.io-client";
 
 # Conexion con la API
-const socket = io.connect("http://34.66.149.205:8080");
+const socket = io.connect("http://35.222.138.58:8080");
 
 function App() {
     # Funcion que retorna un color aleatorio en hexadecimal
@@ -67,7 +68,20 @@ function App() {
     ],
   });
 
+  const [sedes, setSedes] = useState({
+    labels: ["vacio"],
+    datasets: [
+      {
+        label: "Total",
+        data: [100],
+        backgroundColor: ["black"],
+      },
+    ],
+  });
+
   const [tabla, setTabla] = useState([]);
+
+  const [tabla2, setTabla2] = useState([]);
 
   const [fecha, setFecha] = useState("00-00-0000");
 
@@ -78,6 +92,7 @@ function App() {
       const total = data.total[0].cantVotos;
       setFecha(data.fecha);
       setTabla(data.general[0]);
+      setTabla2(data.ultimos);
 
       # Recorrido de los valores que conformaran la grafica de Top de votaciones
 
@@ -140,6 +155,25 @@ function App() {
           },
         ],
       });
+
+      label = [];
+      array = [];
+      for (let value of data.barras) {
+        label.push(value.name);
+        array.push(value.value);
+      }
+
+      setSedes({
+        labels: label,
+        datasets: [
+          {
+            label: "# votos",
+            data: array,
+            backgroundColor: colores(array.length),
+          },
+        ],
+      });
+
     });
   }, [socket]);
 
@@ -182,6 +216,7 @@ function App() {
             <table className="table table-hover">
               <thead>
                 <tr>
+                  <th scope="col">No. Voto</th>
                   <th scope="col">Sede</th>
                   <th scope="col">Departamento</th>
                   <th scope="col">Municipio</th>
@@ -192,7 +227,8 @@ function App() {
               <tbody>
                 {tabla
                   ? tabla.map((voto) => (
-                      <tr key={n++} className="table-dark">
+                      <tr key={n} className="table-dark">
+                        <td scope="row">{n++}</td>
                         <td scope="row">{voto.Sede}</td>
                         <td scope="row">{voto.Departamento}</td>
                         <td scope="row">{voto.Municipio}</td>
@@ -207,15 +243,63 @@ function App() {
         </div>
         <div className="col-md-2"></div>
       </div>
+      <br></br>
+      <div><p style={{ fontSize: "25px", fontWeight: "450"}}>Últimos 5 Votos</p></div>
+      <div className="row">
+        <div className="col-md-2"></div>
+        <div className="col-md-8">
+          <div
+            className="row"
+            style={{ maxHeight: "300px", overflowY: "scroll" }}
+          >
+            <table className="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Sede</th>
+                  <th scope="col">Departamento</th>
+                  <th scope="col">Municipio</th>
+                  <th scope="col">Partido</th>
+                  <th scope="col">Papeleta</th>
+                </tr>
+              </thead>
+              <tbody>
+                {tabla2
+                  ? tabla2.map((voto) => (
+                      <tr key={n++} className="table-dark">
+                        <td scope="row">{voto.sede}</td>
+                        <td scope="row">{voto.departamento}</td>
+                        <td scope="row">{voto.municipio}</td>
+                        <td scope="row">{voto.partido}</td>
+                        <td scope="row">{voto.papeleta}</td>
+                      </tr>
+                    ))
+                  : null}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div className="col-md-2"></div>
+      </div>
+      <div className="row">
+        <div className="col-md-2"></div>
+        <div className="col-md-8">
+          <GraficaBarras
+                nombre="5 sedes con mayores votos almacenados"
+                dataBar={sedes}
+          />
+        </div>
+        <div className="col-md-2"></div>
+      </div>
     </div>
   );
 }
 
 export default App;
+
 ```
 
 ### GraficaPie.js
-En este compoente gracias a la librearia Chart.js se rederiza una grafica de PIE con la informacion que se le es trasladada por medio de props.
+En este componete gracias a la librearia Chart.js se rederiza una grafica de PIE con la informacion que se le es trasladada por medio de props.
 
 ```JS
 import React, { Component } from "react";
@@ -235,6 +319,27 @@ class GraficaPie extends Component {
 }
 
 export default GraficaPie;
+```
+
+### GraficaBarras.js
+En este componete gracias a la librearia Chart.js se rederiza una grafica de Barras con la informacion que se le es trasladada por medio de props.
+```JS
+import React, { Component } from "react";
+import { Bar } from "react-chartjs-2"
+
+class GraficaBarras extends Component {
+  state = {};
+  render() {
+    return (
+      <div className="p-3 col-md-4">
+        <h4>{this.props.nombre}</h4>
+        <Bar data={this.props.dataBar} />
+      </div>
+    );
+  }
+}
+
+export default GraficaBarras;
 ```
 
 ## Docker

@@ -1,8 +1,13 @@
 # Proyecto_SO1_G33
 
-El proposito de la practica es comprender la concurrencia y la teoria del paralelismo para desarrollar sistemas distribuidos; experimeta
+El proposito del proyecto es comprender la concurrencia y la teoria del paralelismo para desarrollar sistemas distribuidos. 
 
-## Manual Tecnico  
+## Arquitectura utilizada
+
+![Arquitecura](ImagenesWeb/Arquitectura.png)
+
+## Manual Tecnico
+
 
 | Servicio | Manual |
 | ------ | ------ |
@@ -12,6 +17,9 @@ El proposito de la practica es comprender la concurrencia y la teoria del parale
 | GRPC SERVER | [gRPC/Server/README.md](gRPC/Server/README.md) |
 | MYSQL | [Database/README.md](SQL/README.md) |
 | LOCUST | [Database/README.md](locust/README.md) |
+| REDIS | [Redis/Redis-server/README.md](Redis/Redis-server/README.md) |
+| REDISPUB | [Redis/redispub/README.md](Redis/redispub/README.md) |
+| REDISSUB | [Redis/redissub/README.md](Redis/redissub/README.md) |
 | k8s | [k8s/README.md](k8s/README.md) |
 
 
@@ -37,6 +45,9 @@ Una vez dentro del sitio podra visualizar un dashboard con multiples graficas y 
 
 ### Tabla con todos los votos ingresados
 ![Tabla General](ImagenesWeb/Tabla.png)
+
+### Tabla con los ultimos 5 votos ingresados, así como las 5 sedes con mayor cantidad de votos almacenados
+![Ultimos Votos](ImagenesWeb/Ultimos.png)
 
 En caso de que la informacion en las graficas o tabla no se cargue debe ir a configuraciones del sitio y perimitir el contenido no seguro.
 

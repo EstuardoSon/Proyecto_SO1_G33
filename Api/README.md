@@ -94,6 +94,29 @@ server.listen(app.get("port"), () => {
 
 ```
 
+Además en este archivo se encuentra la conexión a redis con sus respectivos métodos para obtener la información.
+
+```JS
+const client = redis.createClient({
+  host: 'redis',
+  port: "6379",
+});
+
+const GETR = promisify(client.get).bind(client);
+
+//ejemplo de obtencion de datos de redis por get, asi como uso de set si no se encuentra alguna llave con ese nombre
+const v1 = await GETR("v1");
+    if (v1 == null) {
+      lastfive[0] = "";
+      client.set("v1", "", (err, reply) => {
+        if (err) console.log(err);
+      });
+    }
+    else{
+      lastfive[0] = v1;
+    }
+```
+
 ## Docker
 Para el funcionamiento de esta aplicacion se creo la imagen de docker por medio del siguiente Dockerfile.
 
